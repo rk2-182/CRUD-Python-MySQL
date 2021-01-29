@@ -1,0 +1,9 @@
+comandos git:
+git init: crear repositorio en el directorio del proyecto(se crea una carpeta oculta)
+git status -s: El comando git status muestra el estado del directorio de trabajo y del área del entorno de ensayo.
+git add: agregar archivo para seguimiento.
+git add .: agregar todos los archivos.
+git commit -m "descripción proyecto": guardar los cambios de los archivos en el repositorio.
+git log --oneline: ver lista de las copias respaldadas en el repositorio.
+git reset --hard "codigo": restaurar archivo a la instantanea que deseas por codigo.
+git push origin master: ejecutar sesion
