@@ -17,7 +17,8 @@ print("3.-Actualizar")
 print("4.-Eliminar")
 print("5.-Salir")
 print("6.-Limpiar Pantalla")
-
+print("7.-Buscar por id")
+print("8.-Buscar por username")
 
 opcion = int(input("Ingrese su opción: "))
 
@@ -36,6 +37,10 @@ while True:
         sys.exit(0) #cerrar programa
     elif opcion == 6:
         os.system('cls')
+    elif opcion == 7:
+        crud.buscarPorId()
+    elif opcion == 8:
+        crud.buscarPorNombre()
     else:
         print("Opcion incorrecta")
         time.sleep(0.5)
@@ -48,6 +53,8 @@ while True:
     print("4.-Eliminar")
     print("5.-Salir")
     print("6.-Limpiar Pantalla")
+    print("7.-Buscar por Id")
+    print("8.-Buscar por username")
     opcion = int(input("Ingrese su opción: "))
 
 

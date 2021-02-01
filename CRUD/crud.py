@@ -59,3 +59,32 @@ def eliminar():
         database.commit()
     else:
         print("Ocurrio un error al ingresar")
+
+#*************Buscar registros***************
+def buscarPorId():
+   sql = "select * from Usuario where id = %s"
+   id = int(input("Ingrese el id del usuario: "))
+   values =(id, )
+   cursor.execute(sql,values)
+   resultado = cursor.fetchone()
+
+   print(resultado)
+
+def buscarPorNombre():
+    sql = "select * from Usuario where username = %s"
+    nombreUsuario = input("Ingrese el username del usuario: ")
+    values =(nombreUsuario, )
+    cursor.execute(sql,values)
+    if cursor.rowcount == 1:
+        print("\nNombre de usuario encontrado!")
+        resultado = cursor.fetchone()
+        print(resultado)
+        
+    else:
+        print("Usuario no encontrado")
+   
+
+
+
+
+ 
