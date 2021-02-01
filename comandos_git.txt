@@ -7,3 +7,7 @@ git commit -m "descripción proyecto": guardar los cambios de los archivos en el
 git log --oneline: ver lista de las copias respaldadas en el repositorio.
 git reset --hard "codigo": restaurar archivo a la instantanea que deseas por codigo.
 git push origin master: ejecutar sesion
+git push -u origin master: subir a repositorio web
+
+
+https://stackoverflow.com/questions/10903497/python-mysqldb-where-sql-like

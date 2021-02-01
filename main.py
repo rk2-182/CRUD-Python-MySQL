@@ -19,6 +19,7 @@ print("5.-Salir")
 print("6.-Limpiar Pantalla")
 print("7.-Buscar por id")
 print("8.-Buscar por username")
+print("9.-Buscar por letra")
 
 opcion = int(input("Ingrese su opción: "))
 
@@ -41,6 +42,8 @@ while True:
         crud.buscarPorId()
     elif opcion == 8:
         crud.buscarPorNombre()
+    elif opcion == 9:
+        crud.buscarPorLetra()
     else:
         print("Opcion incorrecta")
         time.sleep(0.5)
@@ -55,6 +58,7 @@ while True:
     print("6.-Limpiar Pantalla")
     print("7.-Buscar por Id")
     print("8.-Buscar por username")
+    print("9.-Buscar por letra")
     opcion = int(input("Ingrese su opción: "))
 
 

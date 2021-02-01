@@ -91,8 +91,17 @@ def buscarPorNombre():
     else:
         print("No encontrado")
     
+def buscarPorLetra():
+    #param = "m"
+    nombreUsuario = input("Ingrese la inicial del nombre a buscar: ")
+    cursor.execute("SELECT username,edad FROM Usuario WHERE username LIKE %s ", ("%" + nombreUsuario + "%",))
+    print("Resultado")
+    resultado = cursor.fetchall()
 
-
-
+    for j in resultado:
+        print("Nombre:...",j[0])
+        print("Edad:.....",j[1])
+    
+    
 
  
