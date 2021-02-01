@@ -60,29 +60,37 @@ def eliminar():
     else:
         print("Ocurrio un error al ingresar")
 
-#*************Buscar registros***************
+#************** Buscar registros ***************
 def buscarPorId():
-   sql = "select * from Usuario where id = %s"
-   id = int(input("Ingrese el id del usuario: "))
-   values =(id, )
-   cursor.execute(sql,values)
-   resultado = cursor.fetchone()
+    sql = "select * from Usuario where id = %s"
+    id = int(input("Ingrese el id del usuario: "))
+    values =(id, )
+    cursor.execute(sql,values)
+    registro = cursor.fetchone()
 
-   print(resultado)
+    #Validar si encuentra el registro
+    if registro != None:
+        print("\nUsuario encontrado:")
+        print(registro)
+    else:
+        print("No encontrado")
+    
 
 def buscarPorNombre():
     sql = "select * from Usuario where username = %s"
     nombreUsuario = input("Ingrese el username del usuario: ")
     values =(nombreUsuario, )
+
     cursor.execute(sql,values)
-    if cursor.rowcount == 1:
-        print("\nNombre de usuario encontrado!")
-        resultado = cursor.fetchone()
-        print(resultado)
-        
+
+    registro = cursor.fetchone()
+
+    if registro != None:
+        print("\nUsuario encontrado:")
+        print(registro)
     else:
-        print("Usuario no encontrado")
-   
+        print("No encontrado")
+    
 
 
 
